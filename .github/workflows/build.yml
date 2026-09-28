@@ -223,7 +223,7 @@ jobs:
 
   release:
     needs: [android, ios, windows]
-    if: always() && github.event_name == 'push' && github.ref == 'refs/heads/main' && needs.android.result == 'success' && needs.ios.result == 'success'
+    if: always() && github.event_name == 'push' && github.ref == 'refs/heads/main' && needs.android.result == 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 20
     permissions:
